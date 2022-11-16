@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/ubi8/ubi:8.0
 
 COPY . /app
-RUN dnf install -y python3 stress && pip3 install -r /app/requirements.txt && chmod -R a+rwx /app
+RUN dnf install -y python3 && pip3 install -r /app/requirements.txt && chmod -R a+rwx /app
 
 EXPOSE 8080
 
